@@ -22,36 +22,16 @@ df["City"] = extracted["City"].str.strip()
 df["State"] = extracted["State"].str.upper()
 df["Zipcode"] = extracted["Zipcode"]
 
-# Lets clean the formatting for Incident Full Address columns by removing spaces and capitalizing the first letter of each word
-#df['Incident Full Address'] = df['Incident Full Address'].str.strip().str.title()
+# Clean the zip code by ensuring it's a string and removing any non-numeric characters
+df["Zipcode"] = df["Zipcode"].astype(str).str.extract(r"(\d{5})")
 
-# Extract 5-digit ZIP code only if it exists at the end of the address
-#df["Zipcode"] = df["Incident Full Address"].str.extract(r"(\d{5})\s*$")
+# Use pgeocode to get city from ZIP code
+nomi = pgeocode.Nominatim("us")
+zip_info = nomi.query_postal_code(df["Zipcode"].tolist())
+df["City"] = zip_info["place_name"].values
 
-# Remove ZIP code before extracting state/city
-#address_without_zip = df["Incident Full Address"].str.replace(r"\s+\d{5}\s*$", "", regex=True)
-
-# Extract state only if it is a 2-letter state code at the end
-#df["State"] = address_without_zip.str.extract(r"\s([A-Z]{2})\s*$")
-
-# Remove state before extracting city
-#address_without_state = address_without_zip.str.replace(r"\s+[A-Z]{2}\s*$", "", regex=True)
-
-# Extract city as the last word before state
-#df["City"] = address_without_state.str.split().str[-1]
-
-# Lets get Zipcode, State and City from the Incident Full Address column and create new columns for them
-#df['Zipcode'] = df['Incident Full Address'].str.split().str[-1]
-#df['State'] = df['Incident Full Address'].str.split().str[-2]
-#df['City'] = df['Incident Full Address'].str.split().str[-3]
-
-# Keep the rest of the address in the new address column
-#df['Address'] = df['Incident Full Address'].str.split().str[:-3].str.join(' ')
-
-
-# Clean the formatting for State and City columns by converting them to uppercase and title case respectively
+# Clean the formatting for State columns by converting them to uppercase and title case respectively
 df['State'] = df['State'].str.upper()
-df['City'] = df['City'].str.title()
 
 # Delete the original Incident Full Address column as we have extracted the necessary information from it
 #df.drop('Incident Full Address', axis=1, inplace=True)
@@ -61,6 +41,23 @@ cols = df.columns.tolist()
 cols = ['Incident Number','Incident Full Address', 'City', 'State', 'Zipcode','Primary Station','Cold Response','Incident Type Category', 'Incident Type', 'Unit Call Sign','Alarm DateTime','Enroute DateTime','Arrival DateTime'] 
 df = df[cols]
 # Store the cleaned data in a new excel file
-df.to_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Updated_Fire_Dept_Data.xlsx', index=False, engine="openpyxl")
+#df.to_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Updated_Fire_Dept_Data.xlsx', index=False, engine="openpyxl")
 
-#print(df.head())
+# Create Location Dimension table
+location_dim = df[["Zipcode", "City", "State"]].copy()
+
+# Remove blank or missing ZIP codes
+location_dim = location_dim.dropna(subset=["Zipcode"])
+
+# Remove duplicate locations
+location_dim = location_dim.drop_duplicates()
+
+# Sort by Zipcode
+location_dim = location_dim.sort_values(by="Zipcode")
+
+# Optional: create Location ID
+location_dim.insert(0, "LocationID", range(1, len(location_dim) + 1))
+
+# Save as a separate Excel file
+location_dim.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Location_Dimension.xlsx", index=False)
+

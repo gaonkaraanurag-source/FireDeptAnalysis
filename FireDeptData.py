@@ -60,6 +60,7 @@ cols = [
     'Primary Station',
     'Cold Response',
     'Incident Type Category',
+    "Incident Type",
     'Unit Call Sign',
     'PSAP DateTime',
     'Alarm DateTime',

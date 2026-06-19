@@ -14,8 +14,12 @@ address = (
 )
 
 # Extract Zipcode from the end of address
-df["Zipcode"] = address.str.extract(r"(\d{5})$")
-
+df["Zipcode"] = (
+    address.str.extract(r"(\d{5})$")[0]
+    .astype("string")
+    .str.strip()
+    .str.zfill(5)
+)
 
 # Use pgeocode to get city from ZIP code
 nomi = pgeocode.Nominatim("us")

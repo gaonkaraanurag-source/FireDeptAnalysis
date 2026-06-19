@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Read the excel file
-df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData.xlsx')
+df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData1.xlsx')
 
 print(df.shape)
 print(df.columns)
@@ -48,9 +48,14 @@ text_cols = [
     "Incident Full Address",
     "Primary Station",
     "Cold Response",
-    "Incident Type Category",
+#    "Incident Type Category",
     "Unit Call Sign"
 ]
+
+#New code added 
+# Convert Category_ID to numeric format
+df["Category_ID"] = pd.to_numeric(df["Category_ID"], errors="coerce").astype("Int64")
+
 
 for col in text_cols:
     df[col] = df[col].astype(str).str.strip()
@@ -139,7 +144,8 @@ final_cols = [
     "Zipcode",
     "Primary Station",
     "Cold Response",
-    "Incident Type Category",
+ #   "Incident Type Category",
+    "Category_ID",
     "Unit Call Sign",
     "PSAP DateTime",
     "Alarm DateTime",
@@ -156,7 +162,7 @@ facttable_FireDept = fact_clean[final_cols]
 fact_rejected = fact_rejected[final_cols]
 
 #Save the clean fact table and the rejected rows to separate Excel files for further analysis
-facttable_FireDept.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData_Cleaned.xlsx", index=False)
-fact_rejected.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData_RejectedRows.xlsx", index=False)
+facttable_FireDept.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData_Cleaned1.xlsx", index=False)
+fact_rejected.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData_RejectedRows1.xlsx", index=False)
 
 print("Files created successfully")

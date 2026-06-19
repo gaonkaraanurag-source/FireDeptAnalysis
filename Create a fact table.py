@@ -2,13 +2,13 @@
 import pandas as pd
 
 # Read the excel file
-df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDeptData.xlsx')
+df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDept_table.xlsx')
 
 # fact table will consist of following columns:
 fact_table = [ 
     "Incident Number",
     "Incident Full Address",
-    "Incident Zip",
+    "Zipcode",
     "Primary Station",
     "Cold Response",
     "Incident Type Category",
@@ -49,6 +49,25 @@ fact_df["Incident Year"] = fact_df["Incident Year"].apply(
 
 # Optional: convert Incident Year to numeric
 fact_df["Incident Year"] = pd.to_numeric(fact_df["Incident Year"], errors="coerce").astype("Int64")
+
+
+# Reorder FireDept table columns
+cols = [
+    'Incident Year',
+    'Incident No Actual',
+    'Incident Full Address',
+    'Zipcode',
+    'Primary Station',
+    'Cold Response',
+    'Incident Type Category',
+    'Unit Call Sign',
+    'PSAP DateTime',
+    'Alarm DateTime',
+    'Enroute DateTime',
+    'Arrival DateTime'
+]
+
+fact_df = fact_df[cols]
 
 # Save fact table
 fact_df.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData.xlsx", index=False)

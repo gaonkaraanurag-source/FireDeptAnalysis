@@ -32,15 +32,15 @@
           <named-connection caption='Date_Dimension' name='excel-direct.0ophzr81ql4oze147oky50w0o5t9'>
             <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Date_Dimension.xlsx' interpretationMode='0' password='' server='' validate='no' />
           </named-connection>
-          <named-connection caption='Fact_FireDeptData_Cleaned1' name='excel-direct.0vste5h08qxfrz18y0iq401ktnlv'>
+          <named-connection caption='Fact_FireDeptData_Cleaned1' name='excel-direct.1x5fzz41cbg9rl1g2v3st02282x6'>
             <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData_Cleaned1.xlsx' interpretationMode='0' password='' server='' validate='no' />
           </named-connection>
-          <named-connection caption='Category_Dimension1' name='excel-direct.09y5iz70r55dzi19d7ocf1eh7rjp'>
+          <named-connection caption='Category_Dimension1' name='excel-direct.02vt5121yjai671dp12rb0f901n3'>
             <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Category_Dimension1.xlsx' interpretationMode='0' password='' server='' validate='no' />
           </named-connection>
         </named-connections>
         <relation type='collection'>
-          <relation connection='excel-direct.0vste5h08qxfrz18y0iq401ktnlv' name='Sheet1' table='[Sheet1$]' type='table'>
+          <relation connection='excel-direct.1x5fzz41cbg9rl1g2v3st02282x6' name='Sheet1' table='[Sheet1$]' type='table'>
             <columns gridOrigin='A1:Q10001:no:A1:Q2147483647:0' header='yes' outcome='2'>
               <column datatype='integer' name='Incident Year' ordinal='0' />
               <column datatype='string' name='Incident No Actual' ordinal='1' />
@@ -69,27 +69,27 @@
               <column datatype='string' name='State' ordinal='3' />
             </columns>
           </relation>
-          <relation connection='excel-direct.0ophzr81ql4oze147oky50w0o5t9' name='Sheet12' table='[Sheet1$]' type='table'>
-            <columns gridOrigin='A1:L1113:no:A1:L1113:0' header='yes' outcome='6'>
-              <column datatype='integer' name='DateID' ordinal='0' />
-              <column datatype='datetime' name='Date' ordinal='1' />
-              <column datatype='integer' name='Year' ordinal='2' />
-              <column datatype='string' name='Quarter' ordinal='3' />
-              <column datatype='integer' name='MonthNumber' ordinal='4' />
-              <column datatype='string' name='MonthName' ordinal='5' />
-              <column datatype='string' name='MonthYear' ordinal='6' />
-              <column datatype='integer' name='Day' ordinal='7' />
-              <column datatype='string' name='DayName' ordinal='8' />
-              <column datatype='integer' name='DayOfWeek' ordinal='9' />
-              <column datatype='integer' name='WeekOfYear' ordinal='10' />
-              <column datatype='boolean' name='IsWeekend' ordinal='11' />
-            </columns>
-          </relation>
-          <relation connection='excel-direct.09y5iz70r55dzi19d7ocf1eh7rjp' name='Sheet11' table='[Sheet1$]' type='table'>
+          <relation connection='excel-direct.02vt5121yjai671dp12rb0f901n3' name='Sheet12' table='[Sheet1$]' type='table'>
             <columns gridOrigin='A1:C148:no:A1:C148:0' header='yes' outcome='6'>
               <column datatype='integer' name='Category_ID' ordinal='0' />
               <column datatype='string' name='Incident Type Category' ordinal='1' />
               <column datatype='string' name='Incident Type' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.0ophzr81ql4oze147oky50w0o5t9' name='Sheet11' table='[Sheet1$]' type='table'>
+            <columns gridOrigin='A1:L1113:no:A1:L1113:0' header='yes' outcome='6'>
+              <column datatype='integer' name='DateID' ordinal='0' />
+              <column datatype='datetime' name='Date' ordinal='1' />
+              <column datatype='string' name='Year' ordinal='2' />
+              <column datatype='string' name='Quarter' ordinal='3' />
+              <column datatype='string' name='MonthNumber' ordinal='4' />
+              <column datatype='string' name='MonthName' ordinal='5' />
+              <column datatype='string' name='MonthYear' ordinal='6' />
+              <column datatype='string' name='Day' ordinal='7' />
+              <column datatype='string' name='DayName' ordinal='8' />
+              <column datatype='string' name='DayOfWeek' ordinal='9' />
+              <column datatype='string' name='WeekOfYear' ordinal='10' />
+              <column datatype='boolean' name='IsWeekend' ordinal='11' />
             </columns>
           </relation>
         </relation>
@@ -98,36 +98,36 @@
           <map key='[Alarm Handling Time]' value='[Sheet1].[Alarm Handling Time]' />
           <map key='[Arrival DateTime]' value='[Sheet1].[Arrival DateTime]' />
           <map key='[Bad Response Time Flag]' value='[Sheet1].[Bad Response Time Flag]' />
-          <map key='[Category_ID (Sheet11)]' value='[Sheet11].[Category_ID]' />
+          <map key='[Category_ID (Sheet12)]' value='[Sheet12].[Category_ID]' />
           <map key='[Category_ID]' value='[Sheet1].[Category_ID]' />
           <map key='[City]' value='[Sheet13].[City]' />
           <map key='[Cold Response]' value='[Sheet1].[Cold Response]' />
-          <map key='[DateID]' value='[Sheet12].[DateID]' />
-          <map key='[Date]' value='[Sheet12].[Date]' />
-          <map key='[DayName]' value='[Sheet12].[DayName]' />
-          <map key='[DayOfWeek]' value='[Sheet12].[DayOfWeek]' />
-          <map key='[Day]' value='[Sheet12].[Day]' />
+          <map key='[DateID]' value='[Sheet11].[DateID]' />
+          <map key='[Date]' value='[Sheet11].[Date]' />
+          <map key='[DayName]' value='[Sheet11].[DayName]' />
+          <map key='[DayOfWeek]' value='[Sheet11].[DayOfWeek]' />
+          <map key='[Day]' value='[Sheet11].[Day]' />
           <map key='[Enroute DateTime]' value='[Sheet1].[Enroute DateTime]' />
           <map key='[Incident Full Address]' value='[Sheet1].[Incident Full Address]' />
           <map key='[Incident No Actual]' value='[Sheet1].[Incident No Actual]' />
-          <map key='[Incident Type Category]' value='[Sheet11].[Incident Type Category]' />
-          <map key='[Incident Type]' value='[Sheet11].[Incident Type]' />
+          <map key='[Incident Type Category]' value='[Sheet12].[Incident Type Category]' />
+          <map key='[Incident Type]' value='[Sheet12].[Incident Type]' />
           <map key='[Incident Year]' value='[Sheet1].[Incident Year]' />
-          <map key='[IsWeekend]' value='[Sheet12].[IsWeekend]' />
+          <map key='[IsWeekend]' value='[Sheet11].[IsWeekend]' />
           <map key='[LocationID]' value='[Sheet13].[LocationID]' />
-          <map key='[MonthName]' value='[Sheet12].[MonthName]' />
-          <map key='[MonthNumber]' value='[Sheet12].[MonthNumber]' />
-          <map key='[MonthYear]' value='[Sheet12].[MonthYear]' />
+          <map key='[MonthName]' value='[Sheet11].[MonthName]' />
+          <map key='[MonthNumber]' value='[Sheet11].[MonthNumber]' />
+          <map key='[MonthYear]' value='[Sheet11].[MonthYear]' />
           <map key='[PSAP DateTime]' value='[Sheet1].[PSAP DateTime]' />
           <map key='[Primary Station]' value='[Sheet1].[Primary Station]' />
-          <map key='[Quarter]' value='[Sheet12].[Quarter]' />
+          <map key='[Quarter]' value='[Sheet11].[Quarter]' />
           <map key='[State]' value='[Sheet13].[State]' />
           <map key='[Total Response Time]' value='[Sheet1].[Total Response Time]' />
           <map key='[Travel Time]' value='[Sheet1].[Travel Time]' />
           <map key='[Turnout Time]' value='[Sheet1].[Turnout Time]' />
           <map key='[Unit Call Sign]' value='[Sheet1].[Unit Call Sign]' />
-          <map key='[WeekOfYear]' value='[Sheet12].[WeekOfYear]' />
-          <map key='[Year]' value='[Sheet12].[Year]' />
+          <map key='[WeekOfYear]' value='[Sheet11].[WeekOfYear]' />
+          <map key='[Year]' value='[Sheet11].[Year]' />
           <map key='[Zipcode (Sheet13)]' value='[Sheet13].[Zipcode]' />
           <map key='[Zipcode]' value='[Sheet1].[Zipcode]' />
         </cols>
@@ -169,7 +169,7 @@
             <contains-null>true</contains-null>
             <attributes>
               <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:L1113:no:A1:L1113:0&quot;</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C148:no:A1:C148:0&quot;</attribute>
               <attribute datatype='boolean' name='header'>true</attribute>
               <attribute datatype='integer' name='outcome'>6</attribute>
             </attributes>
@@ -182,8 +182,8 @@
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
             <attributes>
-              <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:C148:no:A1:C148:0&quot;</attribute>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:L1113:no:A1:L1113:0&quot;</attribute>
               <attribute datatype='boolean' name='header'>true</attribute>
               <attribute datatype='integer' name='outcome'>6</attribute>
             </attributes>
@@ -201,7 +201,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Incident No Actual</remote-name>
@@ -217,7 +217,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Incident Full Address</remote-name>
@@ -233,7 +233,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Zipcode</remote-name>
@@ -249,7 +249,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Primary Station</remote-name>
@@ -265,7 +265,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Cold Response</remote-name>
@@ -281,7 +281,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Category_ID</remote-name>
@@ -296,7 +296,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Unit Call Sign</remote-name>
@@ -312,7 +312,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>PSAP DateTime</remote-name>
@@ -327,7 +327,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Alarm DateTime</remote-name>
@@ -342,7 +342,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Enroute DateTime</remote-name>
@@ -357,7 +357,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Arrival DateTime</remote-name>
@@ -372,7 +372,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Alarm Handling Time</remote-name>
@@ -387,7 +387,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Turnout Time</remote-name>
@@ -403,7 +403,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Travel Time</remote-name>
@@ -418,7 +418,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Total Response Time</remote-name>
@@ -434,7 +434,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Bad Response Time Flag</remote-name>
@@ -449,7 +449,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_54674B955BC8411F910DC812B7F75B07]</object-id>
+            <object-id>[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>LocationID</remote-name>
@@ -464,7 +464,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_344E5D9C5F14494785192576A19EC206]</object-id>
+            <object-id>[Sheet1_83EDB586520045B4A498FA9BA8AB6639]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Zipcode</remote-name>
@@ -480,7 +480,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_344E5D9C5F14494785192576A19EC206]</object-id>
+            <object-id>[Sheet1_83EDB586520045B4A498FA9BA8AB6639]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>City</remote-name>
@@ -496,7 +496,7 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_344E5D9C5F14494785192576A19EC206]</object-id>
+            <object-id>[Sheet1_83EDB586520045B4A498FA9BA8AB6639]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>State</remote-name>
@@ -512,14 +512,14 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_344E5D9C5F14494785192576A19EC206]</object-id>
+            <object-id>[Sheet1_83EDB586520045B4A498FA9BA8AB6639]</object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>DateID</remote-name>
+            <remote-name>Category_ID</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[DateID]</local-name>
+            <local-name>[Category_ID (Sheet12)]</local-name>
             <parent-name>[Sheet12]</parent-name>
-            <remote-alias>DateID</remote-alias>
+            <remote-alias>Category_ID</remote-alias>
             <ordinal>21</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
@@ -527,45 +527,15 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
+            <object-id>[Sheet1_D13BBB7B24CE4A04BB3B5751DB53F971]</object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Date</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[Date]</local-name>
-            <parent-name>[Sheet12]</parent-name>
-            <remote-alias>Date</remote-alias>
-            <ordinal>22</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Year</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Year]</local-name>
-            <parent-name>[Sheet12]</parent-name>
-            <remote-alias>Year</remote-alias>
-            <ordinal>23</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Quarter</remote-name>
+            <remote-name>Incident Type Category</remote-name>
             <remote-type>130</remote-type>
-            <local-name>[Quarter]</local-name>
+            <local-name>[Incident Type Category]</local-name>
             <parent-name>[Sheet12]</parent-name>
-            <remote-alias>Quarter</remote-alias>
-            <ordinal>24</ordinal>
+            <remote-alias>Incident Type Category</remote-alias>
+            <ordinal>22</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
@@ -573,29 +543,60 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
+            <object-id>[Sheet1_D13BBB7B24CE4A04BB3B5751DB53F971]</object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>MonthNumber</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[MonthNumber]</local-name>
+            <remote-name>Incident Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Incident Type]</local-name>
             <parent-name>[Sheet12]</parent-name>
-            <remote-alias>MonthNumber</remote-alias>
-            <ordinal>25</ordinal>
+            <remote-alias>Incident Type</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_D13BBB7B24CE4A04BB3B5751DB53F971]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DateID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DateID]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>DateID</remote-alias>
+            <ordinal>24</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>MonthName</remote-name>
+            <remote-name>Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
             <remote-type>130</remote-type>
-            <local-name>[MonthName]</local-name>
-            <parent-name>[Sheet12]</parent-name>
-            <remote-alias>MonthName</remote-alias>
+            <local-name>[Year]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>Year</remote-alias>
             <ordinal>26</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -604,14 +605,14 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>MonthYear</remote-name>
+            <remote-name>Quarter</remote-name>
             <remote-type>130</remote-type>
-            <local-name>[MonthYear]</local-name>
-            <parent-name>[Sheet12]</parent-name>
-            <remote-alias>MonthYear</remote-alias>
+            <local-name>[Quarter]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>Quarter</remote-alias>
             <ordinal>27</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -620,29 +621,30 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Day</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Day]</local-name>
-            <parent-name>[Sheet12]</parent-name>
-            <remote-alias>Day</remote-alias>
-            <ordinal>28</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>DayName</remote-name>
+            <remote-name>MonthNumber</remote-name>
             <remote-type>130</remote-type>
-            <local-name>[DayName]</local-name>
-            <parent-name>[Sheet12]</parent-name>
-            <remote-alias>DayName</remote-alias>
+            <local-name>[MonthNumber]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>MonthNumber</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MonthName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[MonthName]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>MonthName</remote-alias>
             <ordinal>29</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -651,74 +653,78 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MonthYear</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[MonthYear]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>MonthYear</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Day</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Day]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>Day</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DayName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[DayName]</local-name>
+            <parent-name>[Sheet11]</parent-name>
+            <remote-alias>DayName</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>DayOfWeek</remote-name>
-            <remote-type>20</remote-type>
+            <remote-type>130</remote-type>
             <local-name>[DayOfWeek]</local-name>
-            <parent-name>[Sheet12]</parent-name>
+            <parent-name>[Sheet11]</parent-name>
             <remote-alias>DayOfWeek</remote-alias>
-            <ordinal>30</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
             <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>WeekOfYear</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[WeekOfYear]</local-name>
-            <parent-name>[Sheet12]</parent-name>
-            <remote-alias>WeekOfYear</remote-alias>
-            <ordinal>31</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>IsWeekend</remote-name>
-            <remote-type>11</remote-type>
-            <local-name>[IsWeekend]</local-name>
-            <parent-name>[Sheet12]</parent-name>
-            <remote-alias>IsWeekend</remote-alias>
-            <ordinal>32</ordinal>
-            <local-type>boolean</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
-            </attributes>
-            <object-id>[Sheet1_9791717623D942418278A0C1E3EFFDDB]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Category_ID</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Category_ID (Sheet11)]</local-name>
-            <parent-name>[Sheet11]</parent-name>
-            <remote-alias>Category_ID</remote-alias>
-            <ordinal>33</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-            <object-id>[Sheet1_E780C782FBA045638971234BB253CF87]</object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Incident Type Category</remote-name>
             <remote-type>130</remote-type>
-            <local-name>[Incident Type Category]</local-name>
+            <local-name>[WeekOfYear]</local-name>
             <parent-name>[Sheet11]</parent-name>
-            <remote-alias>Incident Type Category</remote-alias>
+            <remote-alias>WeekOfYear</remote-alias>
             <ordinal>34</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -727,23 +733,22 @@
             <attributes>
               <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_E780C782FBA045638971234BB253CF87]</object-id>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Incident Type</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[Incident Type]</local-name>
+            <remote-name>IsWeekend</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[IsWeekend]</local-name>
             <parent-name>[Sheet11]</parent-name>
-            <remote-alias>Incident Type</remote-alias>
+            <remote-alias>IsWeekend</remote-alias>
             <ordinal>35</ordinal>
-            <local-type>string</local-type>
+            <local-type>boolean</local-type>
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RUS_S2' />
             <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
             </attributes>
-            <object-id>[Sheet1_E780C782FBA045638971234BB253CF87]</object-id>
+            <object-id>[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]</object-id>
           </metadata-record>
         </metadata-records>
       </connection>
@@ -752,28 +757,28 @@
         <calculation class='tableau' formula='COUNTD([Incident No Actual])' />
       </column>
       <column caption='Total Units Dispacted ' datatype='integer' name='[Calculation_2402240932327425]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='COUNTD([Unit Call Sign (Sheet14)])' />
+        <calculation class='tableau' formula='COUNTD([Unit Call Sign])' />
       </column>
       <column caption='Avg Total Response Time' datatype='real' name='[Calculation_2402240932659202]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='AVG([Total Response Time (Sheet14)])' />
+        <calculation class='tableau' formula='AVG([Total Response Time])' />
       </column>
       <column caption='Average Travel Time' datatype='real' name='[Calculation_2402240932765699]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='AVG([Travel Time (Sheet14)])' />
+        <calculation class='tableau' formula='AVG([Travel Time])' />
       </column>
       <column caption='Bad Response Time %' datatype='real' name='[Calculation_2402240932909060]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='SUM(IIF([Bad Response Time Flag (Sheet14)] = TRUE, 1, 0)) / COUNT([Incident No Actual])' />
+        <calculation class='tableau' formula='SUM(IIF([Bad Response Time Flag] = TRUE, 1, 0)) / COUNT([Incident No Actual])' />
       </column>
       <column caption='Cold Calls # ' datatype='integer' name='[Calculation_2809678888775680]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='COUNTD(&#10;IF [Cold Response (Sheet14)] = &quot;Yes&quot; THEN [Incident No Actual] END&#10;)' />
+        <calculation class='tableau' formula='COUNTD(&#10;IF [Cold Response] = &quot;Yes&quot; THEN [Incident No Actual] END&#10;)' />
       </column>
       <column caption='Cold Call %' datatype='real' default-format='*+0.0%;-0.0%' name='[Calculation_2809678889357313]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='COUNTD(IF [Cold Response (Sheet14)] = &quot;Yes&quot; THEN [Incident No Actual] END)&#10;/&#10;COUNTD([Incident No Actual])' />
+        <calculation class='tableau' formula='COUNTD(IF [Cold Response] = &quot;Yes&quot; THEN [Incident No Actual] END)&#10;/&#10;COUNTD([Incident No Actual])' />
       </column>
       <column caption='YoY Incident % Diff' datatype='real' default-format='p0.00%' name='[Calculation_2809678891253762]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='([Calculation_2809678899408904] - [Calculation_2914063804358656])&#10;/&#10;([Calculation_2914063804358656])' />
       </column>
       <column caption='Current Year' datatype='datetime' name='[Calculation_2809678897295365]' role='dimension' type='quantitative'>
-        <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;,[PSAP DateTime (Sheet14)])' />
+        <calculation class='tableau' formula='DATETRUNC(&apos;year&apos;,[PSAP DateTime])' />
       </column>
       <column caption='# Incidents 2025' datatype='integer' name='[Calculation_2809678899408904]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='COUNTD(&#10;    IF YEAR([PSAP DateTime]) = YEAR(TODAY()) - 1&#10;    THEN [Incident No Actual]&#10;    END&#10;)' />
@@ -784,7 +789,10 @@
       <column caption='# Incidents 2023 ' datatype='integer' name='[Calculation_2914063808720898]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='COUNTD(&#10;    IF YEAR([PSAP DateTime]) = YEAR(TODAY()) - 3&#10;    THEN [Incident No Actual]&#10;    END&#10;)' />
       </column>
-      <column caption='Category ID ' datatype='integer' name='[Category_ID (Sheet11)]' role='dimension' type='ordinal' />
+      <column caption='Visual YoY Positive' datatype='string' name='[Calculation_3325624786821120]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_2809678891253762] &gt; 0 THEN &quot;▲&quot; END' />
+      </column>
+      <column caption='Category ID (Sheet12)' datatype='integer' name='[Category_ID (Sheet12)]' role='dimension' type='ordinal' />
       <column caption='Category ID' datatype='integer' name='[Category_ID]' role='dimension' type='ordinal' />
       <column caption='City1' datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column caption='Previous Year' datatype='datetime' name='[Current Year (copy)_2809678898712583]' role='dimension' type='quantitative'>
@@ -792,25 +800,27 @@
       </column>
       <column caption='Date ID' datatype='integer' name='[DateID]' role='dimension' type='ordinal' />
       <column caption='Day Name' datatype='string' name='[DayName]' role='dimension' type='nominal' />
-      <column caption='Day Of Week' datatype='integer' name='[DayOfWeek]' role='dimension' type='quantitative' />
-      <column datatype='integer' name='[Day]' role='dimension' type='quantitative' />
+      <column caption='Day Of Week' datatype='string' name='[DayOfWeek]' role='dimension' type='nominal' />
       <column caption='Incident Type Category1' datatype='string' name='[Incident Type Category]' role='dimension' type='nominal' />
+      <column caption='Incident Type1' datatype='string' name='[Incident Type]' role='dimension' type='nominal' />
       <column datatype='integer' name='[Incident Year]' role='dimension' type='quantitative' />
       <column caption='Is Weekend' datatype='boolean' name='[IsWeekend]' role='dimension' type='nominal' />
       <column caption='Location ID' datatype='integer' name='[LocationID]' role='dimension' type='ordinal' />
       <column caption='Month Name' datatype='string' name='[MonthName]' role='dimension' type='nominal' />
-      <column caption='Month Number' datatype='integer' name='[MonthNumber]' role='dimension' type='quantitative' />
+      <column caption='Month Number' datatype='string' name='[MonthNumber]' role='dimension' type='nominal' />
       <column caption='Month Year' datatype='string' name='[MonthYear]' role='dimension' type='nominal' />
       <column datatype='datetime' name='[PSAP DateTime]' role='dimension' type='ordinal' />
       <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-      <column caption='Week Of Year' datatype='integer' name='[WeekOfYear]' role='dimension' type='quantitative' />
-      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
-      <column datatype='string' name='[Zipcode (Sheet13)]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='Visual YoY Negative' datatype='string' name='[Visual YoY Positive (copy)_3325624787120129]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_2809678891253762] &lt; 0 THEN &quot;▼&quot; END' />
+      </column>
+      <column caption='Week Of Year' datatype='string' name='[WeekOfYear]' role='dimension' type='nominal' />
+      <column caption='Zipcode' datatype='string' name='[Zipcode (Sheet13)]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
       <column caption='Zipcode1' datatype='string' default-format='*00000' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
-      <column caption='Location Dimension' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_344E5D9C5F14494785192576A19EC206]' role='measure' type='quantitative' />
-      <column caption='Fact Table' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_54674B955BC8411F910DC812B7F75B07]' role='measure' type='quantitative' />
-      <column caption='Date Dimension' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_9791717623D942418278A0C1E3EFFDDB]' role='measure' type='quantitative' />
-      <column caption='Category Dimension' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_E780C782FBA045638971234BB253CF87]' role='measure' type='quantitative' />
+      <column caption='Location Dimension' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_83EDB586520045B4A498FA9BA8AB6639]' role='measure' type='quantitative' />
+      <column caption='Category Dimension' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_D13BBB7B24CE4A04BB3B5751DB53F971]' role='measure' type='quantitative' />
+      <column caption='Fact Table' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A]' role='measure' type='quantitative' />
+      <column caption='Date Dimension' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F]' role='measure' type='quantitative' />
       <column-instance column='[PSAP DateTime]' derivation='Month-Trunc' name='[tmn:PSAP DateTime:ok]' pivot='key' type='ordinal' />
       <group caption='Action (City)' hidden='true' name='[Action (City)]' name-style='unqualified' user:auto-column='sheet_link'>
         <groupfilter function='crossjoin'>
@@ -1413,7 +1423,17 @@
       </semantic-values>
       <object-graph>
         <objects>
-          <object caption='Location Dimension' id='Sheet1_344E5D9C5F14494785192576A19EC206'>
+          <object caption='Location Dimension' id='Sheet1_6E08EFD6F0214D509F89D91649698057'>
+            <properties context='extract'>
+              <relation name='Sheet1_6E08EFD6F0214D509F89D91649698057' table='[Extract].[Sheet1_6E08EFD6F0214D509F89D91649698057]' type='table' />
+            </properties>
+          </object>
+          <object caption='Fact Table' id='Sheet1_7DE0C7E9E3EC449FABB19B18827DB699'>
+            <properties context='extract'>
+              <relation name='Sheet1_7DE0C7E9E3EC449FABB19B18827DB699' table='[Extract].[Sheet1_7DE0C7E9E3EC449FABB19B18827DB699]' type='table' />
+            </properties>
+          </object>
+          <object caption='Location Dimension' id='Sheet1_83EDB586520045B4A498FA9BA8AB6639'>
             <properties context=''>
               <relation connection='excel-direct.0kuqyn80uw9r0o10312f10yg3brs' name='Sheet13' table='[Sheet1$]' type='table'>
                 <columns gridOrigin='A1:D19:no:A1:D19:0' header='yes' outcome='2'>
@@ -1425,9 +1445,30 @@
               </relation>
             </properties>
           </object>
-          <object caption='Fact Table' id='Sheet1_54674B955BC8411F910DC812B7F75B07'>
+          <object caption='Date Dimension' id='Sheet1_8A38F96052A44CF5B136EC80FA16F3FF'>
+            <properties context='extract'>
+              <relation name='Sheet1_8A38F96052A44CF5B136EC80FA16F3FF' table='[Extract].[Sheet1_8A38F96052A44CF5B136EC80FA16F3FF]' type='table' />
+            </properties>
+          </object>
+          <object caption='Category Dimension' id='Sheet1_AF03B0E28FFB41C7B91A95EB59A573B0'>
+            <properties context='extract'>
+              <relation name='Sheet1_AF03B0E28FFB41C7B91A95EB59A573B0' table='[Extract].[Sheet1_AF03B0E28FFB41C7B91A95EB59A573B0]' type='table' />
+            </properties>
+          </object>
+          <object caption='Category Dimension' id='Sheet1_D13BBB7B24CE4A04BB3B5751DB53F971'>
             <properties context=''>
-              <relation connection='excel-direct.0vste5h08qxfrz18y0iq401ktnlv' name='Sheet1' table='[Sheet1$]' type='table'>
+              <relation connection='excel-direct.02vt5121yjai671dp12rb0f901n3' name='Sheet12' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:C148:no:A1:C148:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='Category_ID' ordinal='0' />
+                  <column datatype='string' name='Incident Type Category' ordinal='1' />
+                  <column datatype='string' name='Incident Type' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Fact Table' id='Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A'>
+            <properties context=''>
+              <relation connection='excel-direct.1x5fzz41cbg9rl1g2v3st02282x6' name='Sheet1' table='[Sheet1$]' type='table'>
                 <columns gridOrigin='A1:Q10001:no:A1:Q2147483647:0' header='yes' outcome='2'>
                   <column datatype='integer' name='Incident Year' ordinal='0' />
                   <column datatype='string' name='Incident No Actual' ordinal='1' />
@@ -1450,67 +1491,28 @@
               </relation>
             </properties>
           </object>
-          <object caption='Location Dimension' id='Sheet1_6E08EFD6F0214D509F89D91649698057'>
-            <properties context='extract'>
-              <relation name='Sheet1_6E08EFD6F0214D509F89D91649698057' table='[Extract].[Sheet1_6E08EFD6F0214D509F89D91649698057]' type='table' />
-            </properties>
-          </object>
-          <object caption='Fact Table' id='Sheet1_7DE0C7E9E3EC449FABB19B18827DB699'>
-            <properties context='extract'>
-              <relation name='Sheet1_7DE0C7E9E3EC449FABB19B18827DB699' table='[Extract].[Sheet1_7DE0C7E9E3EC449FABB19B18827DB699]' type='table' />
-            </properties>
-          </object>
-          <object caption='Date Dimension' id='Sheet1_8A38F96052A44CF5B136EC80FA16F3FF'>
-            <properties context='extract'>
-              <relation name='Sheet1_8A38F96052A44CF5B136EC80FA16F3FF' table='[Extract].[Sheet1_8A38F96052A44CF5B136EC80FA16F3FF]' type='table' />
-            </properties>
-          </object>
-          <object caption='Date Dimension' id='Sheet1_9791717623D942418278A0C1E3EFFDDB'>
+          <object caption='Date Dimension' id='Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F'>
             <properties context=''>
-              <relation connection='excel-direct.0ophzr81ql4oze147oky50w0o5t9' name='Sheet12' table='[Sheet1$]' type='table'>
+              <relation connection='excel-direct.0ophzr81ql4oze147oky50w0o5t9' name='Sheet11' table='[Sheet1$]' type='table'>
                 <columns gridOrigin='A1:L1113:no:A1:L1113:0' header='yes' outcome='6'>
                   <column datatype='integer' name='DateID' ordinal='0' />
                   <column datatype='datetime' name='Date' ordinal='1' />
-                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='string' name='Year' ordinal='2' />
                   <column datatype='string' name='Quarter' ordinal='3' />
-                  <column datatype='integer' name='MonthNumber' ordinal='4' />
+                  <column datatype='string' name='MonthNumber' ordinal='4' />
                   <column datatype='string' name='MonthName' ordinal='5' />
                   <column datatype='string' name='MonthYear' ordinal='6' />
-                  <column datatype='integer' name='Day' ordinal='7' />
+                  <column datatype='string' name='Day' ordinal='7' />
                   <column datatype='string' name='DayName' ordinal='8' />
-                  <column datatype='integer' name='DayOfWeek' ordinal='9' />
-                  <column datatype='integer' name='WeekOfYear' ordinal='10' />
+                  <column datatype='string' name='DayOfWeek' ordinal='9' />
+                  <column datatype='string' name='WeekOfYear' ordinal='10' />
                   <column datatype='boolean' name='IsWeekend' ordinal='11' />
-                </columns>
-              </relation>
-            </properties>
-          </object>
-          <object caption='Category Dimension' id='Sheet1_AF03B0E28FFB41C7B91A95EB59A573B0'>
-            <properties context='extract'>
-              <relation name='Sheet1_AF03B0E28FFB41C7B91A95EB59A573B0' table='[Extract].[Sheet1_AF03B0E28FFB41C7B91A95EB59A573B0]' type='table' />
-            </properties>
-          </object>
-          <object caption='Category Dimension' id='Sheet1_E780C782FBA045638971234BB253CF87'>
-            <properties context=''>
-              <relation connection='excel-direct.09y5iz70r55dzi19d7ocf1eh7rjp' name='Sheet11' table='[Sheet1$]' type='table'>
-                <columns gridOrigin='A1:C148:no:A1:C148:0' header='yes' outcome='6'>
-                  <column datatype='integer' name='Category_ID' ordinal='0' />
-                  <column datatype='string' name='Incident Type Category' ordinal='1' />
-                  <column datatype='string' name='Incident Type' ordinal='2' />
                 </columns>
               </relation>
             </properties>
           </object>
         </objects>
         <relationships>
-          <relationship>
-            <expression op='='>
-              <expression op='[Zipcode]' />
-              <expression op='[Zipcode (Sheet13)]' />
-            </expression>
-            <first-end-point object-id='Sheet1_54674B955BC8411F910DC812B7F75B07' />
-            <second-end-point object-id='Sheet1_344E5D9C5F14494785192576A19EC206' />
-          </relationship>
           <relationship>
             <expression op='='>
               <expression op='[Zipcode]' />
@@ -1521,19 +1523,19 @@
           </relationship>
           <relationship>
             <expression op='='>
-              <expression op='[PSAP DateTime]' />
-              <expression op='[Date]' />
+              <expression op='[Zipcode]' />
+              <expression op='[Zipcode (Sheet13)]' />
             </expression>
-            <first-end-point object-id='Sheet1_7DE0C7E9E3EC449FABB19B18827DB699' />
-            <second-end-point object-id='Sheet1_8A38F96052A44CF5B136EC80FA16F3FF' />
+            <first-end-point object-id='Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A' />
+            <second-end-point object-id='Sheet1_83EDB586520045B4A498FA9BA8AB6639' />
           </relationship>
           <relationship>
             <expression op='='>
               <expression op='[PSAP DateTime]' />
               <expression op='[Date]' />
             </expression>
-            <first-end-point object-id='Sheet1_54674B955BC8411F910DC812B7F75B07' />
-            <second-end-point object-id='Sheet1_9791717623D942418278A0C1E3EFFDDB' />
+            <first-end-point object-id='Sheet1_7DE0C7E9E3EC449FABB19B18827DB699' />
+            <second-end-point object-id='Sheet1_8A38F96052A44CF5B136EC80FA16F3FF' />
           </relationship>
           <relationship>
             <expression op='='>
@@ -1546,10 +1548,18 @@
           <relationship>
             <expression op='='>
               <expression op='[Category_ID]' />
-              <expression op='[Category_ID (Sheet11)]' />
+              <expression op='[Category_ID (Sheet12)]' />
             </expression>
-            <first-end-point object-id='Sheet1_54674B955BC8411F910DC812B7F75B07' />
-            <second-end-point object-id='Sheet1_E780C782FBA045638971234BB253CF87' />
+            <first-end-point object-id='Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A' />
+            <second-end-point object-id='Sheet1_D13BBB7B24CE4A04BB3B5751DB53F971' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[PSAP DateTime]' />
+              <expression op='[Date]' />
+            </expression>
+            <first-end-point object-id='Sheet1_E1C3258D31E74ECD92EBB6C5C5B4D27A' />
+            <second-end-point object-id='Sheet1_EE8C0322DD8F45D89F3FC92C74CC209F' />
           </relationship>
         </relationships>
       </object-graph>
@@ -1585,6 +1595,51 @@
     </action>
   </actions>
   <worksheets>
+    <worksheet name='Alarm Handling Time KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Multiple Connections)' name='federated.0v5bt9c1g6327c14mg1l11bnrx6b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0v5bt9c1g6327c14mg1l11bnrx6b'>
+            <column datatype='integer' name='[Alarm Handling Time]' role='measure' type='quantitative' />
+            <column-instance column='[Alarm Handling Time]' derivation='Sum' name='[sum:Alarm Handling Time:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[sum:Alarm Handling Time:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='14'>Alarm Handling Time</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[sum:Alarm Handling Time:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1FA88C08-8D26-4E28-8BBE-731BA29326C8}' />
+    </worksheet>
     <worksheet name='Details Table '>
       <table>
         <view>
@@ -1610,10 +1665,12 @@
             <column caption='City1' datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
             <column datatype='string' name='[Incident No Actual]' role='dimension' type='nominal' />
             <column caption='Incident Type Category1' datatype='string' name='[Incident Type Category]' role='dimension' type='nominal' />
+            <column caption='Incident Type1' datatype='string' name='[Incident Type]' role='dimension' type='nominal' />
             <column datatype='datetime' name='[PSAP DateTime]' role='dimension' type='ordinal' />
             <column-instance column='[PSAP DateTime]' derivation='Month' name='[mn:PSAP DateTime:ok]' pivot='key' type='ordinal' />
             <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
             <column-instance column='[Incident Type Category]' derivation='None' name='[none:Incident Type Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Incident Type]' derivation='None' name='[none:Incident Type:nk]' pivot='key' type='nominal' />
             <column-instance column='[Calculation_2402240932139008]' derivation='User' name='[usr:Calculation_2402240932139008:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_2809678891253762]' derivation='User' name='[usr:Calculation_2809678891253762:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Calculation_2809678899408904]' derivation='User' name='[usr:Calculation_2809678899408904:qk]' pivot='key' type='quantitative' />
@@ -1628,20 +1685,6 @@
               <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_2809678899408904:qk]&quot;' />
               <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_2402240932139008:qk]&quot;' />
               <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_2809678891253762:qk]&quot;' />
-            </groupfilter>
-          </filter>
-          <filter class='categorical' column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:City:nk]'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Box Springs&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Cataula&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Columbus&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Fort Benning&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Fortson&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Hogansville&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Lagrange&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Midland&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Phenix City&quot;' />
-              <groupfilter function='member' level='[none:City:nk]' member='&quot;Upatoi&quot;' />
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:Incident Type Category:nk]'>
@@ -1668,7 +1711,6 @@
             <column>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[:Measure Names]</column>
             <column>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[yr:PSAP DateTime:ok]</column>
             <column>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:Incident Type Category:nk]</column>
-            <column>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:City:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -1703,7 +1745,7 @@
             </style>
           </pane>
         </panes>
-        <rows>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:City:nk]</rows>
+        <rows>([federated.0v5bt9c1g6327c14mg1l11bnrx6b].[mn:PSAP DateTime:ok] / ([federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:Incident Type Category:nk] / ([federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:Incident Type:nk] / [federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:City:nk])))</rows>
         <cols>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[:Measure Names]</cols>
       </table>
       <simple-id uuid='{C38D8CF7-413D-4A6B-B6A5-B8474DC5EA76}' />
@@ -1712,7 +1754,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run bold='true' fontalignment='1'>Incidents by Location</run>
+            <run bold='true' fontalignment='1'>Incidents Map</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -1742,28 +1784,7 @@
           <filter class='categorical' column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[Action (MONTH(PSAP DateTime))]'>
             <groupfilter function='level-members' level='[tmn:PSAP DateTime:ok]' user:ui-action-filter='[Action1_4569C55DEC1442179F2A48F2366C0BE3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:Zipcode:nk]'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;30230&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;30240&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31801&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31804&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31808&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31820&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31829&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31901&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31903&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31904&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31905&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31906&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31907&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31908&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;31909&quot;' />
-              <groupfilter function='member' level='[none:Zipcode:nk]' member='&quot;36867&quot;' />
-            </groupfilter>
-          </filter>
           <slices>
-            <column>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[none:Zipcode:nk]</column>
             <column>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[Action (MONTH(PSAP DateTime))]</column>
             <column>[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[Action (City)]</column>
           </slices>
@@ -2243,7 +2264,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run bold='true' fontalignment='1'>No of Incidents per year</run>
+            <run bold='true' fontalignment='1'>Incidents per year</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -2348,6 +2369,244 @@
       </table>
       <simple-id uuid='{B070C49F-1CDA-410B-848C-E3FBE016E819}' />
     </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0BA07A28-E6AE-49FA-805B-B127EAC49E7F}' />
+    </worksheet>
+    <worksheet name='Total Incidents KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Multiple Connections)' name='federated.0v5bt9c1g6327c14mg1l11bnrx6b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0v5bt9c1g6327c14mg1l11bnrx6b'>
+            <column caption='Total Incidents ' datatype='integer' name='[Calculation_2402240932139008]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Incident No Actual])' />
+            </column>
+            <column caption='YoY Incident % Diff' datatype='real' default-format='p0.00%' name='[Calculation_2809678891253762]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([Calculation_2809678899408904] - [Calculation_2914063804358656])&#10;/&#10;([Calculation_2914063804358656])' />
+            </column>
+            <column caption='# Incidents 2025' datatype='integer' name='[Calculation_2809678899408904]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(&#10;    IF YEAR([PSAP DateTime]) = YEAR(TODAY()) - 1&#10;    THEN [Incident No Actual]&#10;    END&#10;)' />
+            </column>
+            <column caption='# Incidents 2024' datatype='integer' name='[Calculation_2914063804358656]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(&#10;    IF YEAR([PSAP DateTime]) = YEAR(TODAY()) - 2&#10;    THEN [Incident No Actual]&#10;    END&#10;)' />
+            </column>
+            <column caption='Visual YoY Positive' datatype='string' name='[Calculation_3325624786821120]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_2809678891253762] &gt; 0 THEN &quot;▲&quot; END' />
+            </column>
+            <column datatype='string' name='[Incident No Actual]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[PSAP DateTime]' role='dimension' type='ordinal' />
+            <column caption='Visual YoY Negative' datatype='string' name='[Visual YoY Positive (copy)_3325624787120129]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_2809678891253762] &lt; 0 THEN &quot;▼&quot; END' />
+            </column>
+            <column-instance column='[Calculation_2402240932139008]' derivation='User' name='[usr:Calculation_2402240932139008:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2809678891253762]' derivation='User' name='[usr:Calculation_2809678891253762:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_3325624786821120]' derivation='User' name='[usr:Calculation_3325624786821120:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Visual YoY Positive (copy)_3325624787120129]' derivation='User' name='[usr:Visual YoY Positive (copy)_3325624787120129:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='pane'>
+            <format attr='border-color' data-class='total' value='#000000' />
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_2809678891253762:qk]' />
+              <text column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_2402240932139008:qk]' />
+              <text column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Visual YoY Positive (copy)_3325624787120129:nk]' />
+              <text column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_3325624786821120:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='16'>Total Incidents </run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_2402240932139008:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#59a14f' fontsize='12'><![CDATA[<[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Visual YoY Positive (copy)_3325624787120129:nk]>]]></run>
+                <run fontcolor='#e15759' fontsize='12'><![CDATA[<[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_3325624786821120:nk]>]]></run>
+                <run fontsize='12'><![CDATA[<[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[usr:Calculation_2809678891253762:qk]>]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BEC7E985-E770-4E15-8EFF-5E2FA59D1021}' />
+    </worksheet>
+    <worksheet name='Total Response Time KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Multiple Connections)' name='federated.0v5bt9c1g6327c14mg1l11bnrx6b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0v5bt9c1g6327c14mg1l11bnrx6b'>
+            <column datatype='real' name='[Total Response Time]' role='measure' type='quantitative' />
+            <column-instance column='[Total Response Time]' derivation='Sum' name='[sum:Total Response Time:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[sum:Total Response Time:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='14'>Total Response Time</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[sum:Total Response Time:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E4831566-08BC-4DDB-9F8C-50F911632958}' />
+    </worksheet>
+    <worksheet name='Total Travel Time KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Multiple Connections)' name='federated.0v5bt9c1g6327c14mg1l11bnrx6b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0v5bt9c1g6327c14mg1l11bnrx6b'>
+            <column datatype='integer' name='[Travel Time]' role='measure' type='quantitative' />
+            <column-instance column='[Travel Time]' derivation='Sum' name='[sum:Travel Time:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[sum:Travel Time:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='14'>Travel Time</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[sum:Travel Time:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F8ADE8AD-C115-436E-A377-60F52EBA473D}' />
+    </worksheet>
+    <worksheet name='Turnout Time KPI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Multiple Connections)' name='federated.0v5bt9c1g6327c14mg1l11bnrx6b' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0v5bt9c1g6327c14mg1l11bnrx6b'>
+            <column datatype='real' name='[Turnout Time]' role='measure' type='quantitative' />
+            <column-instance column='[Turnout Time]' derivation='Sum' name='[sum:Turnout Time:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[sum:Turnout Time:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='14'>Turnout Time</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='14'><![CDATA[<[federated.0v5bt9c1g6327c14mg1l11bnrx6b].[sum:Turnout Time:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F4DC8456-6826-4A1D-90E5-8497AF075D26}' />
+    </worksheet>
   </worksheets>
   <dashboards>
     <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
@@ -2377,19 +2636,50 @@
               <format attr='margin' value='4' />
             </zone-style>
           </zone>
-          <zone h='47083' id='13' param='horz' type-v2='layout-flow' w='100000' x='0' y='5666'>
-            <zone fixed-size='592' h='47083' id='14' is-fixed='true' name='Incidents per year' w='50000' x='0' y='5666'>
-              <layout-cache minheight='173' minwidth='100' type-h='scalable' type-w='scalable' />
-              <zone-style>
-                <format attr='border-color' value='#000000' />
-                <format attr='border-style' value='none' />
-                <format attr='border-width' value='0' />
-                <format attr='margin' value='4' />
-              </zone-style>
-            </zone>
-            <zone h='47083' id='15' param='horz' type-v2='layout-flow' w='50000' x='50000' y='5666'>
-              <zone h='47083' id='16' name='Incident per city' w='50000' x='50000' y='5666'>
-                <layout-cache cell-count-w='11' minheight='243' type-h='scalable' type-w='cell' />
+          <zone fixed-size='116' h='19333' id='42' is-fixed='true' param='horz' type-v2='layout-flow' w='100000' x='0' y='5666'>
+            <zone h='19333' id='43' param='horz' type-v2='layout-flow' w='100000' x='0' y='5666'>
+              <zone h='19333' id='44' name='Total Incidents KPI' show-title='false' w='14000' x='0' y='5666'>
+                <layout-cache fixed-size-h='78' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='19333' id='45' param='horz' type-v2='layout-flow' w='17334' x='14000' y='5666'>
+                <zone h='10000' id='46' name='Alarm Handling Time KPI' show-title='false' w='17334' x='14000' y='5666'>
+                  <layout-cache fixed-size-h='52' fixed-size-w='200' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='19333' id='47' param='horz' type-v2='layout-flow' w='17334' x='31334' y='5666'>
+                <zone h='10000' id='48' name='Total Response Time KPI' show-title='false' w='17334' x='31334' y='5666'>
+                  <layout-cache fixed-size-h='52' fixed-size-w='200' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='19333' id='49' name='Total Travel Time KPI' show-title='false' w='10667' x='48668' y='5666'>
+                <layout-cache fixed-size-h='52' fixed-size-w='120' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='19333' id='50' name='Turnout Time KPI' w='25667' x='59335' y='5666'>
+                <layout-cache type-h='fixed' type-w='fixed' />
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -2399,7 +2689,29 @@
               </zone>
             </zone>
           </zone>
-          <zone h='47250' id='3' name='Incident Map' w='100000' x='0' y='52749'>
+          <zone h='32417' id='13' param='horz' type-v2='layout-flow' w='100000' x='0' y='24999'>
+            <zone fixed-size='592' h='32417' id='14' is-fixed='true' name='Incidents per year' w='50000' x='0' y='24999'>
+              <layout-cache minheight='173' minwidth='100' type-h='scalable' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='32417' id='15' param='horz' type-v2='layout-flow' w='50000' x='50000' y='24999'>
+              <zone h='32417' id='16' name='Incident per city' w='50000' x='50000' y='24999'>
+                <layout-cache cell-count-w='11' minheight='183' type-h='scalable' type-w='cell' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='42584' id='3' name='Incident Map' w='100000' x='0' y='57416'>
             <layout-cache minheight='244' type-h='scalable' type-w='fixed' />
             <zone-style>
               <format attr='border-color' value='#000000' />
@@ -2412,10 +2724,10 @@
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='33' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='32' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97334' id='40' param='vert' type-v2='layout-flow' w='98666' x='667' y='1333'>
                 <zone h='5666' id='2' type-v2='text' w='100000' x='0' y='0'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='14'>Summary</run>
@@ -2428,7 +2740,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='264' h='45417' id='14' is-fixed='true' name='Incidents per year' w='50000' x='0' y='5666'>
+                <zone fixed-size='274' h='47083' id='14' is-fixed='true' name='Incidents per year' w='50000' x='0' y='5666'>
                   <layout-cache minheight='173' minwidth='100' type-h='scalable' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2438,8 +2750,8 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='264' h='45417' id='16' is-fixed='true' name='Incident per city' w='50000' x='50000' y='5666'>
-                  <layout-cache cell-count-w='11' minheight='223' type-h='scalable' type-w='cell' />
+                <zone fixed-size='274' h='47083' id='16' is-fixed='true' name='Incident per city' w='50000' x='50000' y='5666'>
+                  <layout-cache cell-count-w='11' minheight='243' type-h='scalable' type-w='cell' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2448,7 +2760,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='48917' id='3' is-fixed='true' name='Incident Map' w='100000' x='0' y='51083'>
+                <zone fixed-size='276' h='47250' id='3' is-fixed='true' name='Incident Map' w='100000' x='0' y='52749'>
                   <layout-cache minheight='244' type-h='scalable' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2502,8 +2814,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='29' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='28' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
+            <zone h='100000' id='37' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='36' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000'>
                 <zone fixed-size='280' h='100000' id='13' is-fixed='true' name='Incidents per Category' w='41917' x='0' y='0'>
                   <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
                   <zone-style>
@@ -2541,7 +2853,50 @@
     </dashboard>
   </dashboards>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Details Table '>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C6C17FB5-9AB7-4B76-B6BB-FE6752ACA13A}' />
+    </window>
+    <window class='worksheet' name='Total Incidents KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6501EA29-6399-413E-AC07-7B18FD91167A}' />
+    </window>
+    <window class='worksheet' name='Details Table '>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2671,8 +3026,92 @@
       </viewpoint>
       <simple-id uuid='{BE5B09F1-2B98-4FA2-B90D-DF041E4A14D1}' />
     </window>
-    <window class='dashboard' name='Dashboard 1'>
+    <window class='worksheet' name='Alarm Handling Time KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{97AFE6A8-F856-45F3-A1E7-E263440CDFAD}' />
+    </window>
+    <window class='worksheet' name='Total Response Time KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8BBE203D-3C57-4B8A-9AAC-9930467DFD72}' />
+    </window>
+    <window class='worksheet' name='Total Travel Time KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{95F98C25-28FE-40A0-8E00-3F7F396907E6}' />
+    </window>
+    <window class='worksheet' name='Turnout Time KPI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{43A5D105-AE6C-4E66-9521-6C0B658E1C37}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
+        <viewpoint name='Alarm Handling Time KPI' />
         <viewpoint name='Incident Map'>
           <zoom type='entire-view' />
         </viewpoint>
@@ -2682,8 +3121,12 @@
         <viewpoint name='Incidents per year'>
           <zoom type='entire-view' />
         </viewpoint>
+        <viewpoint name='Total Incidents KPI' />
+        <viewpoint name='Total Response Time KPI' />
+        <viewpoint name='Total Travel Time KPI' />
+        <viewpoint name='Turnout Time KPI' />
       </viewpoints>
-      <active id='-1' />
+      <active id='50' />
       <simple-id uuid='{A4EC6053-5B56-4A56-A05C-ED5DA283E700}' />
     </window>
     <window class='dashboard' name='Dashboard 2'>

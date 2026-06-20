@@ -5,8 +5,7 @@ import pandas as pd
 df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDeptData.xlsx')
 
 # Clean Incident Type Category
-# Example: "1 -Fire" becomes "Fire"
-# Example: "2 - Overpressure Rupture..." becomes "Overpressure Rupture..."
+# for example 1 -Fire" becomes Fire and 2 - Overpressure Rupture will  becomes Overpressure Rupture
 df["Incident Type Category"] = (
     df["Incident Type Category"]
     .astype("string")

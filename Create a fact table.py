@@ -57,12 +57,61 @@ fact_df["Incident Year"] = pd.to_numeric(
     errors="coerce"
 ).astype("Int64")
 
+# Convert date columns to datetime format
+datetime_cols = [
+    "PSAP DateTime",
+    "Alarm DateTime",
+    "Enroute DateTime",
+    "Arrival DateTime"
+]
+
+for col in datetime_cols:
+    fact_df[col] = pd.to_datetime(fact_df[col], errors="coerce")
+
+# Updating date field to match with the date dimension table
+fact_df["PSAP_DateID"] = fact_df["PSAP DateTime"].dt.strftime("%Y%m%d").astype("Int64")
+fact_df["Alarm_DateID"] = fact_df["Alarm DateTime"].dt.strftime("%Y%m%d").astype("Int64")
+fact_df["Enroute_DateID"] = fact_df["Enroute DateTime"].dt.strftime("%Y%m%d").astype("Int64")
+fact_df["Arrival_DateID"] = fact_df["Arrival DateTime"].dt.strftime("%Y%m%d").astype("Int64")
+
+
+# Updating the Category fields to match with the category dimension table for merging
+# Clean category merge fields in fact table
+fact_df["Incident Type Category"] = (
+    fact_df["Incident Type Category"]
+    .astype("string")
+    .str.strip()
+    .str.replace(r"^\d+\s*-\s*", "", regex=True)
+)
+
+fact_df["Incident Type"] = (
+    fact_df["Incident Type"]
+    .astype("string")
+    .str.strip()
+)
+
+# Clean category merge fields in category dimension
+category_dim["Incident Type Category"] = (
+    category_dim["Incident Type Category"]
+    .astype("string")
+    .str.strip()
+    .str.replace(r"^\d+\s*-\s*", "", regex=True)
+)
+
+category_dim["Incident Type"] = (
+    category_dim["Incident Type"]
+    .astype("string")
+    .str.strip()
+)
+
+
 # Bring Category_ID into fact table
 fact_df = fact_df.merge(
     category_dim,
     on=["Incident Type Category", "Incident Type"],
     how="left"
 )
+
 
 # Remove original Incident Number and category text fields from fact table
 fact_df = fact_df.drop(
@@ -74,10 +123,9 @@ fact_df = fact_df.drop(
     ]
 )
 
-
 # Reorder Fact table columns
 cols = [
-    'Incident Year',
+     'Incident Year',
     'Incident No Actual',
     'Incident Full Address',
     'Zipcode',
@@ -85,6 +133,14 @@ cols = [
     'Cold Response',
     'Category_ID',
     'Unit Call Sign',
+
+    # Date Dimension Keys
+    'PSAP_DateID',
+    'Alarm_DateID',
+    'Enroute_DateID',
+    'Arrival_DateID',
+
+    # Original DateTime fields
     'PSAP DateTime',
     'Alarm DateTime',
     'Enroute DateTime',

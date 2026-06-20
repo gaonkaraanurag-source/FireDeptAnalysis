@@ -4,6 +4,17 @@ import pandas as pd
 # Read the excel file 
 df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDeptData.xlsx')
 
+# Clean Incident Type Category
+# Example: "1 -Fire" becomes "Fire"
+# Example: "2 - Overpressure Rupture..." becomes "Overpressure Rupture..."
+df["Incident Type Category"] = (
+    df["Incident Type Category"]
+    .astype("string")
+    .str.strip()
+    .str.replace(r"^\d+\s*[-–—]\s*", "", regex=True)
+)
+
+
 # Select the required columns for the Category Dimension Table
 category_dim = (
     df[["Incident Type Category", "Incident Type"]]

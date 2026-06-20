@@ -12,6 +12,19 @@ print(df.columns)
 df.columns = df.columns.str.strip()
 print(df.columns)
 
+# Convert DateID columns to numeric format
+date_id_cols = [
+    "PSAP_DateID",
+    "Alarm_DateID",
+    "Enroute_DateID",
+    "Arrival_DateID"
+]
+
+for col in date_id_cols:
+    df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
+
+
+
 # Removeing duplicate rows from the fact table
 before_rows = len(df)
 df = df.drop_duplicates()
@@ -33,7 +46,11 @@ print(df[datetime_cols].dtypes)
 
 # Lets make sure that the incident number year matches with the year in PSAP DateTime
 # Extract year from PSAP DateTime
-df["Incident Year"] = df["PSAP DateTime"].dt.year
+#df["Incident Year"] = df["PSAP DateTime"].dt.year
+#print(df["Incident Year"].value_counts(dropna=False).sort_index())
+
+# Use PSAP DateTime year as the final Incident Year for date analysis
+df["Incident Year"] = df["PSAP DateTime"].dt.year.astype("Int64")
 print(df["Incident Year"].value_counts(dropna=False).sort_index())
 
 # Removing rows with missing incident numbers 
@@ -147,15 +164,23 @@ final_cols = [
  #   "Incident Type Category",
     "Category_ID",
     "Unit Call Sign",
+   # Date keys for Tableau relationships
+    "PSAP_DateID",
+    "Alarm_DateID",
+    "Enroute_DateID",
+    "Arrival_DateID",
+    # Original datetime fields
     "PSAP DateTime",
     "Alarm DateTime",
     "Enroute DateTime",
     "Arrival DateTime",
+    # Response time metrics
     "Alarm Handling Time",
     "Turnout Time",
     "Travel Time",
     "Total Response Time",
-    "Bad Response Time Flag"
+    "Bad Response Time Flag",
+    "Missing Response Time Flag"
 ]
 
 facttable_FireDept = fact_clean[final_cols]

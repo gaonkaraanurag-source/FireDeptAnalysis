@@ -18,8 +18,9 @@ date_dim = pd.DataFrame({
     "Date": pd.date_range(start=min_date, end=max_date, freq="D")
 })
 
+
 # Create date attributes
-date_dim["DateID"] = date_dim["Date"].dt.strftime("%Y%m%d").astype(int)
+date_dim["DateID"] = date_dim["Date"].dt.date
 date_dim["Year"] = date_dim["Date"].dt.year
 date_dim["Quarter"] = "Q" + date_dim["Date"].dt.quarter.astype(str)
 date_dim["MonthNumber"] = date_dim["Date"].dt.month

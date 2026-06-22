@@ -69,10 +69,10 @@ for col in datetime_cols:
     fact_df[col] = pd.to_datetime(fact_df[col], errors="coerce")
 
 # Updating date field to match with the date dimension table
-fact_df["PSAP_DateID"] = fact_df["PSAP DateTime"].dt.strftime("%Y%m%d").astype("Int64")
-fact_df["Alarm_DateID"] = fact_df["Alarm DateTime"].dt.strftime("%Y%m%d").astype("Int64")
-fact_df["Enroute_DateID"] = fact_df["Enroute DateTime"].dt.strftime("%Y%m%d").astype("Int64")
-fact_df["Arrival_DateID"] = fact_df["Arrival DateTime"].dt.strftime("%Y%m%d").astype("Int64")
+fact_df["PSAP_DateID"] = fact_df["PSAP DateTime"].dt.date
+fact_df["Alarm_DateID"] = fact_df["Alarm DateTime"].dt.date
+fact_df["Enroute_DateID"] = fact_df["Enroute DateTime"].dt.date
+fact_df["Arrival_DateID"] = fact_df["Arrival DateTime"].dt.date
 
 
 # Updating the Category fields to match with the category dimension table for merging

@@ -12,7 +12,7 @@ print(df.columns)
 df.columns = df.columns.str.strip()
 print(df.columns)
 
-# Convert DateID columns to numeric format
+# Convert DateID columns to date format
 date_id_cols = [
     "PSAP_DateID",
     "Alarm_DateID",
@@ -21,7 +21,7 @@ date_id_cols = [
 ]
 
 for col in date_id_cols:
-    df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int64")
+    df[col] = pd.to_datetime(df[col], errors="coerce").dt.date
 
 
 

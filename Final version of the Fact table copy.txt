@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Read the excel file
-df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_Fact_FireDeptData1.xlsx')
+df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData1.xlsx')
 
 print(df.shape)
 print(df.columns)
@@ -187,7 +187,7 @@ facttable_FireDept = fact_clean[final_cols]
 fact_rejected = fact_rejected[final_cols]
 
 #Save the clean fact table and the rejected rows to separate Excel files for further analysis
-facttable_FireDept.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_Fact_FireDeptData_Cleaned1.xlsx", index=False)
-fact_rejected.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_Fact_FireDeptData_RejectedRows1.xlsx", index=False)
+facttable_FireDept.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData_Cleaned1.xlsx", index=False)
+fact_rejected.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData_RejectedRows1.xlsx", index=False)
 
 print("Files created successfully")

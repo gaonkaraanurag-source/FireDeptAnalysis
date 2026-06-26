@@ -5,7 +5,7 @@ import pgeocode
 
 
 # Read the excel file into a pandas DataFrame
-df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Mock_FireDept_Raw_Data.xlsx')
+df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDeptData.xlsx')
 
 address = (
     df["Incident Full Address"]
@@ -51,7 +51,7 @@ location_dim = location_dim.sort_values(by="Zipcode")
 location_dim.insert(0, "LocationID", range(1, len(location_dim) + 1))
 
 # Save as a separate Excel file
-location_dim.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_Location_Dimension.xlsx", index=False)
+location_dim.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Location_Dimension.xlsx", index=False)
 
 # Reorder FireDept table columns
 cols = [
@@ -72,4 +72,4 @@ cols = [
 df = df[cols]
 
 # Store the FireDept table with the new columns and cleaned data
-df.to_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_FireDept_table.xlsx', index=False, engine="openpyxl")
+df.to_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDept_table.xlsx', index=False, engine="openpyxl")

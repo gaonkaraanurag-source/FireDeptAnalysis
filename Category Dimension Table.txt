@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Read the excel file 
-df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Mock_FireDept_Raw_Data.xlsx')
+df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDeptData.xlsx')
 
 # Clean Incident Type Category
 # for example 1 -Fire" becomes Fire and 2 - Overpressure Rupture will  becomes Overpressure Rupture
@@ -34,5 +34,5 @@ category_dim = (
 category_dim.insert(0, "Category_ID", range(1, len(category_dim) + 1))
 
 # Save to Excel
-category_dim.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_Category_Dimension.xlsx", index=False)
+category_dim.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Category_Dimension1.xlsx", index=False)
 

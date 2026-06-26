@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Read the excel file
-df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Mock_FireDept_Raw_Data.xlsx')
+df = pd.read_excel('/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDeptData.xlsx')
 # Convert date columns to datetime
 date_columns = ["PSAP DateTime", "Alarm DateTime", "Enroute DateTime", "Arrival DateTime"]
 
@@ -51,4 +51,4 @@ date_dim = date_dim[
 ]
 
 # Save as Excel
-date_dim.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_Date_Dimension.xlsx", index=False)
+date_dim.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Date_Dimension.xlsx", index=False)

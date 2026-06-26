@@ -2,10 +2,10 @@
 import pandas as pd
 
 # Read the excel file
-df = pd.read_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_FireDept_table.xlsx")
+df = pd.read_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/FireDept_table.xlsx")
 
 # Read Category Dimension
-category_dim = pd.read_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_Category_Dimension.xlsx")
+category_dim = pd.read_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Category_Dimension1.xlsx")
 
 # fact table will consist of following columns:
 fact_table = [ 
@@ -151,4 +151,4 @@ fact_df = fact_df[cols]
 
 
 # Save fact table
-fact_df.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/M_Fact_FireDeptData1.xlsx", index=False)
+fact_df.to_excel("/Users/anuraggaonkar/Downloads/Data Analyst Assignment/Fact_FireDeptData1.xlsx", index=False)
